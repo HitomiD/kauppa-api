@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "date": "2024-01-18",
+    "products": [
+      {
+        "name": "Sugar",
+        "quantity": 2,
+        "sale_price": 10.0,
+        "cost": 5.0
+      },
+      {
+        "name": "Milk",
+        "quantity": 1,
+        "sale_price": 15.0,
+        "cost": 7.5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "2024-01-18",
+    "products": [
+      {
+        "name": "Creamer",
+        "quantity": 3,
+        "sale_price": 8.0,
+        "cost": 4.0
+      },
+      {
+        "name": "Shirt",
+        "quantity": 1,
+        "sale_price": 10.0,
+        "cost": 5.0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "2024-02-18",
+    "products": [
+      {
+        "name": "Creamer",
+        "quantity": 3,
+        "sale_price": 8.0,
+        "cost": 4.0
+      },
+      {
+        "name": "Shirt",
+        "quantity": 1,
+        "sale_price": 10.0,
+        "cost": 5.0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "date": "2024-02-18",
+    "products": [
+      {
+        "name": "Creamer",
+        "quantity": 3,
+        "sale_price": 8.0,
+        "cost": 4.0
+      },
+      {
+        "name": "Shirt",
+        "quantity": 1,
+        "sale_price": 10.0,
+        "cost": 5.0
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "date": "2024-02-18",
+    "products": [
+      {
+        "name": "Creamer",
+        "quantity": 3,
+        "sale_price": 8.0,
+        "cost": 4.0
+      },
+      {
+        "name": "Shirt",
+        "quantity": 1,
+        "sale_price": 10.0,
+        "cost": 5.0
+      }
+    ]
+  }
+]
