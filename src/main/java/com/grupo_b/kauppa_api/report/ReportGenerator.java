@@ -24,6 +24,12 @@ public class ReportGenerator {
         return SparkSession.builder().master("local").getOrCreate();
     }
 
+    /**
+     * Returns an ordered list of products from most to least units sold
+     * @param sparkSession
+     * @param sales
+     * @return
+     */
     public List<TopSalesDTO> monthlyTopSales(SparkSession sparkSession, List<SaleWithProducts> sales){
 
         Dataset<SaleWithProducts> salesDataset = sparkSession.createDataset(sales, Encoders.bean(SaleWithProducts.class));
@@ -51,6 +57,12 @@ public class ReportGenerator {
         return orderedMonthlySales.collectAsList();
     }
 
+    /**
+     *
+     * @param sparkSession
+     * @param sales
+     * @return
+     */
     public List<SaleWithProfitDTO> mostMonthlyProfitProducts(SparkSession sparkSession, List<SaleWithProfit> sales){
 
         Dataset<SaleWithProfit> salesWithCost = sparkSession.createDataset(sales, Encoders.bean(SaleWithProfit.class));

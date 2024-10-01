@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins ="*")
+@CrossOrigin(origins ="/**")
 @RequestMapping(path="/report")
 public class ReportController {
 
@@ -20,7 +20,6 @@ public class ReportController {
     public ReportController(ReportService reportService){
         this.reportService = reportService;
     }
-
 
     @PostMapping(value = "/top-sales/monthly", consumes = "application/json", produces = "application/json")
     public List<TopSalesDTO> topMonthlySales(@RequestBody List<SaleWithProducts> sales){
