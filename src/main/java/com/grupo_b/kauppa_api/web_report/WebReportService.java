@@ -26,8 +26,16 @@ public class WebReportService {
         return webReportGenerator.mostToLeastSoldProducts(sparkSession, sales);
     }
 
+    public List<Product> getTopMonthlySalesAnnual(ArrayList<SaleRequestDTO> requestDTOSales){
+        SparkSession sparkSession = webReportGenerator.getSparkSession();
+
+        ArrayList<SaleWithProducts> sales = saleRequestToSaleWithProducts(requestDTOSales);
+
+        return webReportGenerator.mostToLeastSoldProducts(sparkSession, sales);
+    }
+
     public ArrayList<SaleWithProducts> saleRequestToSaleWithProducts(ArrayList<SaleRequestDTO> salesRequestDTOList){
-        //Map the ProductRequestDTO to a normal Product class object
+        // Map the ProductRequestDTO to a normal Product class object
         ArrayList<SaleWithProducts> salesList = new ArrayList<SaleWithProducts>();
         for (int i=0; i < salesRequestDTOList.size(); i++){
             SaleWithProducts saleWithProducts = new SaleWithProducts();

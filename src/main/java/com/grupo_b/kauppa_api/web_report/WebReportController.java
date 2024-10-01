@@ -31,4 +31,10 @@ public class WebReportController {
         return "monthly-report";
     }
 
+    @PostMapping(value = "/annual", consumes = "application/json")
+    public String annualReport(@RequestBody ArrayList<SaleRequestDTO> requestSales, Model model){
+        List<Product> topProducts = webReportService.getTopMonthlySales(requestSales);
+        model.addAttribute("products", topProducts);
+        return "annual-report";
+    }
 }

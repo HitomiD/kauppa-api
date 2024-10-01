@@ -56,6 +56,12 @@ public class WebReportGenerator {
         return orderedMonthlySales.collectAsList();
     }
 
+    /**
+     * Returns an ordered list of products by units sold from a detailed sales list.
+     * @param sparkSession Spark session to use to process the dataset
+     * @param sales List of Sale objects.
+     * @return List of ordered Product objects.
+     */
     public List<Product> mostToLeastSoldProducts(SparkSession sparkSession, List<SaleWithProducts> sales){
 
         Dataset<SaleWithProducts> salesDataset = sparkSession.createDataset(sales, Encoders.bean(SaleWithProducts.class));
